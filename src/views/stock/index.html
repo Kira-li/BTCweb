@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../static/css/reset.min.css">
+    <link rel="stylesheet" href="../../static/fonts/iconfont.min.css">
+    <link rel="stylesheet" href="../../static/css/common.min.css">
+    <link rel="stylesheet" href="../../static/css/paging.min.css">
+    <link rel="stylesheet" href="./index.min.css">
+    <title>BTC首页</title>
+</head>
+<body>
+    @@include("../../components/header/head.html")
+   
+    <!-- 注册 -->
+    <div class="res_bg index_regesiter isdisplay">
+        @@include("../../components/login/regesiter.html")
+    </div>
+    <!-- 登录 -->
+    <div class="res_bg index_login isdisplay">
+        @@include("../../components/login/login.html")
+    </div>
+    <!-- 短信验证码登录 -->
+    <div class="res_bg index_mes isdisplay">
+        @@include("../../components/login/meslogin.html")
+    </div>
+    <!-- 忘记密码 -->
+    <div class="res_bg index_fgt isdisplay">
+        @@include("../../components/login/fgtpwd.html")
+    </div>
+    <div>
+        <div>
+            <p>申请操盘资金</p>
+            <div>
+                <div>
+                    <p>输入投入本金</p>
+                    <input type="text" placeholder="请输入投入本金">
+                    <p>选择投入倍数</p>
+                    <div>
+                        <input type="button" value="50倍">
+                        <input type="button" value="60倍">
+                        <input type="button" value="70倍">
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    @@include("../../components/footer/footer.html")
+</body>
+<script type="text/javascript" src="../../static/js/jquery3.2.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/global.min.js"></script>
+<script type="text/javascript" src="../../static/js/common.min.js"></script>
+<script type="text/javascript" src="./index.min.js"></script>
+</html>

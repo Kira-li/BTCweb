@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../static/css/reset.min.css">
+    <link rel="stylesheet" href="../../static/fonts/iconfont.min.css">
+    <link rel="stylesheet" href="../../static/css/common.min.css">
+    <link rel="stylesheet" href="../../static/css/paging.min.css">
+    <link rel="stylesheet" href="./index.min.css">
+    <title>BTC首页</title>
+</head>
+<body>
+    @@include("../../components/header/head.html")
+
+    <!-- <div class="index_banner">
+        <ul></ul>
+    </div> -->
+    <div class="banner">
+        <ul class="img"></ul>
+        <ul class="num"></ul>
+        <div class="btn btn_l">&lt;</div>
+        <div class="btn btn_r">&gt;</div>
+    </div>
+    <div style="overflow: hidden;">
+        <div class="index_zs">
+            <div class="index_zs_more clearfix">
+                <p class="left_side">指数行情</p>
+                <div class="right_side">查看更多>></div>
+            </div>
+            <ul class="index_zs_list clearfix"></ul>
+        </div>
+    </div>
+    <div style="overflow: hidden;">
+        <div class="index_trade">
+            <p>合约交易</p>
+            <ul class="index_trade_title clearfix">
+                <li style="width:10%;">币种</li>
+                <li style="width:18%;">最新价</li>
+                <li style="width:22%;">24H涨跌幅</li>
+                <li style="width:18%;">24H最高</li>
+                <li style="width:18%;">24H最低</li>
+                <li style="width:14%;">操作</li>
+            </ul>
+            <ul class="index_trade_list">
+
+            </ul>
+            <div class="Pagebox"></div>
+        </div>
+    </div>
+    <!-- 注册 -->
+    <div class="res_bg index_regesiter isdisplay">
+        @@include("../../components/login/regesiter.html")
+    </div>
+    <!-- 登录 -->
+    <div class="res_bg index_login isdisplay">
+        @@include("../../components/login/login.html")
+    </div>
+    <!-- 短信验证码登录 -->
+    <div class="res_bg index_mes isdisplay">
+        @@include("../../components/login/meslogin.html")
+    </div>
+    <!-- 忘记密码 -->
+    <div class="res_bg index_fgt isdisplay">
+        @@include("../../components/login/fgtpwd.html")
+    </div>
+    @@include("../../components/footer/footer.html")
+</body>
+<script type="text/javascript" src="../../static/js/jquery3.2.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/global.min.js"></script>
+<script type="text/javascript" src="../../static/js/common.min.js"></script>
+<script type="text/javascript" src="../../static/js/paging.min.js"></script>
+<script type="text/javascript" src="./index.min.js"></script>
+</html>
