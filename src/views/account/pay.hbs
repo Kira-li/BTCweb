@@ -1,0 +1,64 @@
+{{!-- 支付列表 --}}
+<div class="account_buy">
+    <h5>乐币购买</h5>
+    <div class="clearfix account_buy_way">
+        <div class="left_side">请选择购买方式：</div>
+        <ul class="left_side clearfix">
+            <li class="clearfix">
+                <input type="radio" name="支付方式" value="3" checked="checked">
+                <p><img src="../static/images/bank.png">银行卡支付</p>  
+            </li>
+            <li class="clearfix">
+                <input type="radio" name="支付方式" value="1">
+                <p class="clearfix"><i class="iconfont icon-zhifubao"></i><span>支付宝支付</span></p> 
+            </li>
+            <li class="clearfix">
+                <input type="radio" name="支付方式" value="2">
+                <p class="clearfix"><i class="iconfont icon-weixin-copy"></i><span>微信支付</span></p> 
+            </li>
+        </ul>
+    </div>
+    <div class="account_buy_list"></div>
+    <div class="account_buy_other isdisplay">
+        <input type="text" placeholder="请输入充值金额" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" maxlength="6">
+    </div>
+    <div class="account_buy_relase">
+        <p>实际付款金额<span>100.11</span></p>
+        <input type="button" value="提交">
+    </div>
+</div>
+<div class="account_wx isdisplay">
+    <h5>支付宝/微信支付</h5>
+    <ul>
+        <li>充值步骤：</li>
+        <li>1、使用手机屏幕截图保存二维码</li>
+        <li>2、打开手机支付宝/微信点击扫一扫</li>
+        <li>3、点击相册选择二维码付款</li>
+        <li class="account_wx_remark">4、为了方便审核，在转账时请输入你的账户ID和注册手机号码</li>
+    </ul>
+    <div>
+        二维码
+    </div>
+</div>
+<div class="account_bank isdisplay">
+    <h5>银行卡支付</h5>
+    <ul class="account_bank_admin">
+        <li class="account_admin_number">账   户：<span>6214 2266 4546 4586</span></li>
+        <li class="account_admin_name">户   名：<span>张三三</span></li>
+        <li class="account_admin_despoit">开户行：招商银行抚顺支行</li>
+        <li class="account_bank_wanning">重要提醒：转账完成后请务必填写备注以便财务审核通过</li>
+    </ul>
+    <ul class="account_bank_customer">
+        <li>购买所需金额:<span>5000.11</span></li>
+        <li class="clearfix account_customer_number">
+            <p>转账卡号</p>
+            <input type="text" placeholder="您的汇款账号">
+        </li>
+        <li>
+            <input type="text" name="" id="account_custmor_remark" placeholder="备注消息：为了方便审核，请输入你的账户ID和注册手机号">
+        </li>
+    </ul>
+    <div class="account_bank_enter">
+        <input type="button" value="提交">
+    </div>
+</div>

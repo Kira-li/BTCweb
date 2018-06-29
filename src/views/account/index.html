@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../static/css/reset.min.css">
+    <link rel="stylesheet" href="../../static/fonts/iconfont.min.css">
+    <link rel="stylesheet" href="../../static/css/common.min.css">
+    <link rel="stylesheet" href="../../static/css/paging.min.css">
+    <link rel="stylesheet" href="./index.min.css">
+    <title>BTC首页</title>
+</head>
+<body>
+    @@include("../../components/header/head.html")
+   
+    <div class="banner">
+        <ul class="img"></ul>
+        <ul class="num"></ul>
+        <div class="btn btn_l">&lt;</div>
+        <div class="btn btn_r">&gt;</div>
+    </div>
+    <div style="overflow: hidden;">
+        <div style="margin: 0 auto;width: 1100px;" class="clearfix account_cont">
+            <ul class="account_tab left_side">
+                <li class="color">账户中心</li>
+                <li>资金划转</li>
+                <li>消息中心</li>
+                <li>资金明细</li>
+            </ul>
+            <ul class="account_detail left_side"></ul>
+            <div class="account_trades left_side isdisplay"></div>
+            <div class="account_despoit left_side isdisplay">
+                <h5>收益</h5>
+                <p class="account_despoit_balance">当前账户余额：<span>10000</span>乐币</p>
+                <ul>
+                    <li class="account_despoit_way">
+                        <span>请选择提现方式:</span>
+                        <select class="">
+                            <option value ="支付宝">支付宝</option>
+                            <option value ="微信">微信</option>
+                            <option value ="银行卡">银行卡</option>
+                        </select>
+                    </li>
+                    <li class="account_despoit_number">
+                        结算账户：<input type="text" placeholder="请输入您的收款账号">
+                    </li>
+                    <li class="account_despoit_name">
+                        账号姓名：<input type="text" placeholder="请输入您的收款账号姓名">
+                    </li>
+                    <li class="account_despoit_money">
+                        可结算金额：<input type="text" placeholder="请输入您的结算金额">
+                    </li>
+                    <li class="account_despoit_all clearfix">
+                        <p class="left_side">可提现金额：<span>1110</span></p>
+                        <div class="right_side">全部提现</div>
+                    </li>
+                    <li class="account_despoit_btn">
+                        <input type="button" value="确认提交">
+                    </li>
+                    <li>
+                       <p>温馨提示</p> 
+                       <p>1.结算请在工作日9:00-16:00内申请，T+1个工作日内到账</p>
+                       <p>2.确认提交后，客服会立马联系您，跟您确认提交金额，结算账号！</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册 -->
+    <div class="res_bg index_regesiter isdisplay">
+        @@include("../../components/login/regesiter.html")
+    </div>
+    <!-- 登录 -->
+    <div class="res_bg index_login isdisplay">
+        @@include("../../components/login/login.html")
+    </div>
+    <!-- 短信验证码登录 -->
+    <div class="res_bg index_mes isdisplay">
+        @@include("../../components/login/meslogin.html")
+    </div>
+    <!-- 忘记密码 -->
+    <div class="res_bg index_fgt isdisplay">
+        @@include("../../components/login/fgtpwd.html")
+    </div>
+    <div class="res_bg isdisplay index_pop">
+        @@include("../../components/pop/pop.html")
+    </div>
+    @@include("../../components/footer/footer.html")
+</body>
+<script type="text/javascript" src="../../static/js/jquery3.2.1.min.js"></script>
+<script type="text/javascript" src="../../static/js/global.min.js"></script>
+<script type="text/javascript" src="../../static/js/common.min.js"></script>
+<script type="text/javascript" src="../../static/js/paging.min.js"></script>
+<script type="text/javascript" src="./index.min.js"></script>
+</html>

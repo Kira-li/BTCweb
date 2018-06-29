@@ -130,11 +130,11 @@ footer {
     padding: 20px;
     position: absolute;
     width: 416px;
-    height: 420px;
+    height: 320px;
     background: #fff;
     top:50%;
     left: 50%;
-    margin-top: -210px;
+    margin-top: -160px;
     margin-left: -210px;
     ul {
         padding: 30px;
@@ -335,5 +335,41 @@ footer {
             font-size: 20px;
             color: #dddada;
         }
+    }
+}
+.res_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5)
+}
+.pop {
+    width: 360px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    margin-top: -200px;
+    margin-left: -180px;
+    .pop_title {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #888;
+        text-align: center;
+    }
+    .pop_cont {
+        text-align: center;
+        margin: 30px 0;
+    }
+    input {
+        width: 100%;
+        color: #fff;
+        height: 40px;
+        background: #248ad2;
+        border: 0;
     }
 }

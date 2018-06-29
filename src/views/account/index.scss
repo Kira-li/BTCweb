@@ -1,0 +1,575 @@
+.banner{
+    // border:5px solid #000; 
+    width:100%;
+    height:450px;
+    position: relative;
+    overflow: hidden;
+    .img {
+        width:500%;
+        position: absolute;
+        left:0px;
+        top:0px;
+        li {
+            float:left;
+            img {
+                width: 100%;
+                height: 450px;
+            }
+        }
+    }
+    .num {
+        position:absolute;
+        width:100%;
+        bottom:20px;
+        left:0px;
+        text-align: center;
+        font-size: 0px;
+        li {
+            width:15px;
+            height:15px;
+            background: #888;
+            border-radius: 50%;
+            display: inline-block;
+            margin:0 3px;
+            cursor: pointer;
+        }
+    }
+    .btn {
+        width:30px;
+        height:50px;
+        background: rgba(0,0,0,0.5);
+        position:absolute;
+        top:50%;
+        margin-top:-25px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+        color:#fff;
+        font-size: 40px;
+        font-family: "宋体";
+        display: none;
+    }
+    .btn_l {
+        left:0px;
+    }
+    .btn_r {
+        right:0px;
+    }
+}
+.banner .num li.on{
+    background: #f00;
+}
+.banner:hover .btn{
+    display: block;
+}
+
+.account_cont {
+    width: 1100px;
+    margin:  0 auto;
+    padding-top: 20px;
+    .account_tab {
+        border: 1px solid #888;
+        margin-right: 100px;
+        .color {
+            color: #fff;
+            background: #248ad2;
+        }
+        li {
+            // border-left: 1px solid #888;
+            height: 50px;
+            line-height: 50px;
+            text-indent: 20px;
+            width: 180px;
+            font-size: 18px;
+        }
+    }
+    .account_detail {
+        li {
+
+        }
+        .account_user {
+            h5 {
+                font-size: 26px;
+                border-bottom: 1px solid #888;
+                margin-bottom: 10px;
+            }
+            .account_pay {
+                p {
+                    float: left;
+                    margin-right: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-weight: 600;
+                }
+                input {
+                    float: left;
+                    margin-right: 20px;
+                    border-radius: 5px;
+                    width: 60px;
+                    height: 30px;
+                }
+                .account_pay_buy {
+                    border: 1px solid #888;
+                    background: #fff;
+                }
+                .account_pay_despoit {
+                    background: #248ad2;
+                    color: #fff;
+                    border: 0
+                }
+            }
+            .account_mes {
+                border: 1px solid #888;
+                width: 800px;
+                padding-bottom: 50px;
+                margin-top: 20px;
+                .account_mes_title {
+                    text-indent: 10px;
+                    background: #e7e9ed;
+                    margin-bottom: 20px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                div {
+                    position: relative;
+                    p {
+                        border: 1px solid #888;
+                        height: 40px;
+                        line-height: 40px;
+                        width: 300px;
+                        margin: 0 auto;
+                        margin-bottom: 10px;
+                        text-indent: 10px;
+                        border-radius: 5px;
+                    }
+                    .account_mes_change {
+                        position: absolute;
+                        right: 180px;
+                        bottom: 10px;
+                        color: #888;
+                        border-bottom: 1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.account_change {
+    width: 800px;
+    h5 {
+        font-size: 24px;
+        border-bottom: 1px solid #888;
+        margin-bottom: 50px;
+    }
+    .account_change_jiesuan {
+        width: 480px;
+        margin: 0 auto;
+        .accout_change_contract {
+            p,h3 {
+                float: left;
+            }
+            h3 {
+                font-size: 30px;
+                font-weight: 600;
+                margin: 0 20px;
+            }
+            p {
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid #888;
+                border-radius: 5px;
+                width: 160px;
+                text-align: center;
+            }
+        }
+        select {
+            width: 324px;
+            height: 40px;
+            padding-left: 10px;
+        }
+        div {
+            h3 {
+                width: 110px;
+                text-align: center;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        .account_change_bum {
+            
+            input {
+                height: 40px;
+                width: 310px;
+                padding-left: 10px;
+            }
+        }
+        .account_change_enter {
+            margin: 0 auto;
+            width: 300px;
+            input {
+                width: 300px;
+                height: 40px;
+                background: #248ad2;
+                border-radius: 5px;
+                border: 0;
+                color: #fff;
+                margin-bottom:20px;
+            }
+        }
+        .account_change_warm {
+            color: #f00;
+            display: table;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+        .accout_change_contract,.accout_change_choose,.account_change_bum {
+            margin-bottom: 20px;   
+        }
+    }
+}
+.account_cash {
+    h5 {
+        font-size: 24px;
+        border-bottom: 1px solid #888;
+        margin-bottom: 20px; 
+        width: 100%;
+        font-weight: 600;
+    }
+    .account_pay {
+        margin: 20px 0;
+        p,input {
+            float: left;
+            margin-right: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+        p {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        input {
+            border-radius: 5px;
+            width: 60px;
+        }
+        .account_pay_buy {
+            border: 1px solid #888;
+            background: #fff;
+        }
+        .account_pay_despoit {
+            background: #248ad2;
+            color: #fff;
+            border: 0
+        }
+    }
+    .account_cash_detail {
+        border: 1px solid #888;
+        width: 800px;
+        padding-bottom: 30px;
+        h3 {
+            width: 100%;
+            text-align: center;
+            background: #e7e9ed;
+            font-size: 18px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: 500;
+        }
+        .account_cash_title {
+            margin-top: 10px;
+            li {
+                margin: 0 10px;
+                float: left;
+                input,select {
+                    margin: 0 10px;
+                    height: 30px;
+                    padding-left: 10px;
+                    // font-size: 14px;
+                }
+                select {
+                    width: 80px;
+                }
+            }
+            .account_cash_search {
+                input {
+                    width: 80px;
+                    height: 30px;
+                    border: 1px solid #888;
+                    background: #fff;
+                    border-radius: 5px;
+                    padding: 0;
+                }
+            }
+            
+        }
+        .account_cash_name {
+            margin-top:20px;
+            li {
+                float: left;
+                width: 20%;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+    .Pagebox {
+        display: table;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+
+.account_trades {
+    width: 800px;
+    h5 {
+        border-bottom: 1px solid #888;
+        font-weight: 600;
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .account_buy_way {
+        margin-top: 30px;
+        div {
+            display: table;
+            height: 40px;
+            line-height: 40px;
+        }
+        ul {
+            width: 600px;
+        }
+        li {
+            float: left;
+            margin:0 50px 20px 0;
+        }
+        p,input {
+            float: left;
+        }
+        p {
+            width: 180px;
+            padding-left: 20px;
+            border: 1px solid #888;
+            height: 40px;
+            img {
+                margin: 4px 20px 0 0;
+            }
+            i,span {
+                float: left;
+            }
+            span {
+                margin:10px 0 0 20px;
+            }
+        }
+        input {
+            width: 16px;
+            height: 16px;
+            margin: 12px;
+        }
+        .icon-zhifubao {
+            color: #09aaf0;
+            font-size: 30px;
+        }
+        .icon-weixin-copy {
+            color: #19d100;
+            font-size: 30px;
+        }
+    }
+    .account_buy_list {
+        margin-top: 30px;
+        input {
+            width: 100px;
+            height: 40px;
+            background: #fff;
+            border: 1px solid #888;
+            border-radius: 5px;
+            margin:0 0 30px 50px;
+        }
+        .checked {
+            background: #248ad2;
+            color: #fff;
+            border: 0;
+        }
+    }
+    .account_buy_other {
+        width: 300px;
+        margin: 0 auto;
+        input {
+            width: 276px;
+            height: 40px;
+            padding-left: 20px;
+        }
+    }
+    .account_buy_relase {
+        display: table;
+        margin: 0 auto;
+        p {
+            color: red;
+            margin: 20px 0;
+        }
+        input {
+            width: 300px;
+            height: 40px;
+            background: #248ad2;
+            border-radius: 5px;
+            border: 0;
+            color: #fff;
+        }
+    }
+}
+
+.account_wx {
+    // .account_wx_remark {
+    //     color: #b0b0b0;
+    // }
+    ul {
+        display: table;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    div {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        background: #248ad2;
+    }
+}
+.account_bank {
+    .account_bank_admin {
+        margin-top: 30px;
+        border: 1px solid #888;
+        padding: 20px 0 30px 100px;
+        .account_bank_wanning {
+            color: #b0b0b0;
+        }
+        li {
+            height: 30px;
+            line-height: 30px;
+        }
+        
+    }
+    #account_custmor_remark {
+        border: 0;
+        width: 320px;
+    }
+    .account_bank_customer {
+        display: table;
+        margin: 0 auto;
+        margin-top: 20px;
+        li {
+            width: 400px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding-left: 10px;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+        input {
+            height: 40px;
+            // border: 0;
+            // width: 300px; 
+        }
+        .account_customer_number {
+            
+            input,p {
+                float: left;
+            }
+            p {
+                width: 100px;
+            }
+            input {
+                height: 40px;
+                border: 0;
+                width: 200px;
+                padding-left: 10px;
+                border-left: 1px solid #888;
+            }
+        }
+    }
+    .account_bank_enter {
+        display: table;
+        margin: 0 auto;
+        input {
+            width: 300px;
+            height: 40px;
+            background: #248ad2;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+        }
+    }
+    
+}
+.account_despoit {
+    width: 800px;
+    h5 {
+        border-bottom: 1px solid #888;
+        font-size: 20px;
+        font-weight: 600;
+        text-indent: 20px;
+    }
+    .account_despoit_balance {
+        font-size: 18px;
+        margin: 20px 0 30px;
+        border-bottom:1px dotted #888;
+        label {
+            font-size: 16px;
+        }
+    }
+    ul {
+        li {
+            margin: 0 auto;
+            display: table;
+            p {
+                margin: 0 auto;
+                display: table;
+                color: #f00;
+                line-height: 30px;
+                height: 30px;
+            }
+        }
+        .account_despoit_way {
+            margin-bottom: 20px;
+            select {
+                width: 300px;
+                height: 40px;
+            }
+        }
+        .account_despoit_number,.account_despoit_name,.account_despoit_money {
+            border: 1px solid #888;
+            width: 400px;
+            text-indent: 10px;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            input {
+                border: 0;
+                padding-left: 50px;
+                width: 250px;
+            }
+        }
+        .account_despoit_all {
+            width: 400px;
+            margin-bottom: 30px;
+            p {
+                color: #000;
+            }
+            div {
+                color: #FF9800;
+            }
+        }
+        .account_despoit_btn {
+            margin-bottom: 30px;
+            input {
+                width: 300px;
+                background: #248ad2;
+                border:0;
+                height:40px;
+                border-radius: 5px;
+                color: #fff;
+            }
+        }
+    }
+}

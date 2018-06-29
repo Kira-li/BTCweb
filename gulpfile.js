@@ -76,7 +76,7 @@ gulp.task('webpack', function() {
         fs: 'empty'
       }
     }).on('error', notify.onError("Error: <%= error.message %>")))
-    .pipe(gulp.dest(config.path.dist))
+    // .pipe(gulp.dest(config.path.dist))
     .pipe(uglify())
     .pipe(rename(function(path){
       path.basename += '.min'

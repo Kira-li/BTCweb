@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../static/css/reset.min.css">
     <link rel="stylesheet" href="../../static/fonts/iconfont.min.css">
     <link rel="stylesheet" href="../../static/css/common.min.css">
-    <link rel="stylesheet" href="../../static/css/paging.min.css">
     <link rel="stylesheet" href="./index.min.css">
     <title>BTC首页</title>
 </head>
@@ -30,21 +29,48 @@
     <div class="res_bg index_fgt isdisplay">
         @@include("../../components/login/fgtpwd.html")
     </div>
-    <div>
-        <div>
-            <p>申请操盘资金</p>
-            <div>
-                <div>
+    <div style="overflow: hidden;">
+        <div class="index_safe">
+            <p class="index_apply">申请操盘资金</p>
+            <div class="clearfix">
+                <div class="left_side index_change">
                     <p>输入投入本金</p>
-                    <input type="text" placeholder="请输入投入本金">
+                    <input type="text" placeholder="请输入投入本金,1000元起配" class="index_change_money">
                     <p>选择投入倍数</p>
-                    <div>
+                    <div class="index_change_btn">
                         <input type="button" value="50倍">
                         <input type="button" value="60倍">
                         <input type="button" value="70倍">
                     </div>
                 </div>
-                <div></div>
+                <div class="right_side index_pz">
+                    <p class="index_pz_limit">今日限股</p>
+                    <ul>
+                        <li class="clearfix">
+                            <p class="left_side">投资本金</p>
+                            <p class="right_side">10000元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="left_side">总操作资金</p>
+                            <p class="right_side">500000元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="left_side">亏损平仓线</p>
+                            <p class="right_side">8800元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="left_side">风险保证金</p>
+                            <p class="right_side">10000元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="left_side">管理费</p>
+                            <p class="right_side">0元</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index_enter">
+                <input type="button" value="确定进入">
             </div>
         </div>
     </div>

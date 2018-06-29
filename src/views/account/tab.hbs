@@ -1,0 +1,94 @@
+<li class="account_user account_tab_list">
+    <h5>钱包</h5>
+    <div class="clearfix account_pay">
+        <p>账户余额：<span class="account_allmoney">11000</span></p>
+        <input type="button" value="购买" class="account_pay_buy">
+        <input type="button" value="收益" class="account_pay_despoit">
+    </div>
+    <div class="account_mes">
+        <p class="account_mes_title">账户消息</p>
+        <div>
+            <p class="account_mes_name">账户名：<span>{{data.phone}}</span></p>
+            <p style="text-indent: 30px;" class="account_mes_id">ID：<span>{{data.userId}}</span></p>
+            <p>登录密码：*********</p>
+            <span class="account_mes_change">更改</span>
+        </div>
+    </div>
+</li>
+<li class="account_change isdisplay account_tab_list">
+    <h5>资金划转</h5>
+    <div class="account_change_jiesuan">
+        <div class="clearfix accout_change_contract">
+            <p>结算账户</p>
+            <h3>&gt;</h3>
+            <p>BTC合约账户</p>
+        </div>
+        <div class="clearfix accout_change_choose">
+            <h3 class="left_side">选择币种</h3>
+            <select class="left_side">
+                <option value ="BTC">BTC</option>
+                <option value ="LTC">LTC</option>
+                <option value="HTC">HTC</option>
+            </select>
+        </div>
+        <div class="account_change_bum clearfix">
+            <h3 class="left_side">转入数量</h3>
+            <div class="left_side">
+                <input type="text" placeholder="请输入转入数量">
+                <p>可转入数量<span></span></p>
+            </div> 
+        </div>
+        <div class="account_change_enter">
+            <input type="button" value="确认划转">
+        </div>
+        <p class="account_change_warm">温馨提示</p>
+        <p class="account_change_warm">1.虚拟币的转入是自动入账，网络确认达到后自动入账。</p>
+    </div>
+</li>
+<li class="account_user isdisplay account_tab_list">
+    <h5>消息中心</h5>
+    <div class="clearfix account_pay">
+        <p>账户余额：<span class="account_allmoney">1100</span></p>
+        <input type="button" value="购买" class="account_pay_buy">
+        <input type="button" value="提现" class="account_pay_despoit">
+    </div>
+</li>
+<li class="account_cash isdisplay account_tab_list">
+    <h5>资金明细</h5>
+    <div class="clearfix account_pay">
+        <p>账户余额：<span class="account_allmoney">11000</span></p>
+        <input type="button" value="购买" class="account_pay_buy">
+        <input type="button" value="提现" class="account_pay_despoit">
+    </div>
+    <div class="account_cash_detail">
+        <h3>资金明细</h3>
+        <ul class="account_cash_title clearfix">
+            <li>
+                开始日期 <input type="date" class="acount_cash_start" value="2018-05-05">
+            </li>
+            <li>
+                结束日期 <input type="date" class="acount_cash_end" value="2018-05-05">
+            </li>
+            <li class="account_cash_select">
+                方式
+                <select>
+                    <option value = "购买">购买</option>
+                    <option value = "收益">收益</option>
+                    <option value = "提现">提现</option>
+                </select>
+            </li>
+            <li class="account_cash_search">
+                <input type="button" value="查询">
+            </li>
+        </ul>
+        <ul class="account_cash_name clearfix">
+            <li>交易日期</li>
+            <li>交易金额</li>
+            <li>方式</li>
+            <li>交易通道</li>
+            <li>状态</li>
+        </ul>
+        <ul class="account_cash_list"></ul>
+        <div class="Pagebox"></div>
+    </div>
+</li>

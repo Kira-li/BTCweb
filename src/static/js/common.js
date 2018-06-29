@@ -33,36 +33,45 @@ $(function () {
     $('.login_btn').on('click',function(){
         var phone = $('.login_phone').val()
         var pwd = $('.login_pwd').val()
+        var data = JSON.stringify({phoneno:phone,password:pwd})
+        var userId = GLOBAL.userInfo.userId;
         $.ajax({
             type:'POST',
-            url:GLOBAL.httpUrl+'home/getBaseRoom',
+            url:GLOBAL.httpUrl+'auth/login',
             dataType:'json',
-            headers:{"Content-Type":"application/json"},
+            headers:{"Content-Type":"application/json", "token": userId},
             // beforeSend: function(xhr) {
             //     xhr.setRequestHeader("Content-Type", "application/json");
             // },
-            data:{phoneno:phone,password:pwd},
+            data:data,
             success: function(data){
                 // console.log(data);
-                GLOBAL.isLogin = true
-                $('.index_login').addClass('isdisplay');
+                console.log(data)
+                // console.log()
+                if(data.code == 200) {
+                    console.log(data.data.userId)
+                    GLOBAL.isLogin = true
+                    localStorage.setItem("user_phone",$('.login_phone').val())
+                    localStorage.setItem("user_userId",data.data.userId)
+                    $('.index_login').addClass('isdisplay'); 
+                }
             }
         })   
     })
     // 注册
     $('.regesiter_btn').on('click',function(){
         // alert(GLOBAL.isLogin)
-        if(GLOBAL.regPhone.test($('.res_phone').val()) && GLOBAL.regPhone.test($('.res_pwd').val())){
-            var data = {
+        if(GLOBAL.regPhone.test($('.res_phone').val()) && GLOBAL.regPwd.test($('.res_pwd').val())){
+            var data = JSON.stringify({
                 phoneno:$('.res_phone').val(),
                 validcode:$('.res_code').val(),
                 password:$('.res_pwd').val(),
                 repassword:$('.res_repwd').val(),
                 inviteid:$('.res_inv').val(),
-            }
+            })
             $.ajax({
                 type:'POST',
-                url:GLOBAL.httpUrl+'auth/getValidCode',
+                url:GLOBAL.httpUrl+'auth/register',
                 dataType:'json',
                 headers:{"Content-Type":"application/json"},
                 // beforeSend: function(xhr) {
@@ -71,8 +80,11 @@ $(function () {
                 data:data,
                 success: function(data){
                     // console.log(data);
-                    $('.index_regesiter').addClass('isdisplay');
-                    $('.index_login').removeClass('isdisplay');
+                    if(data.code == 200) {
+                        $('.index_regesiter').addClass('isdisplay');
+                        $('.index_login').removeClass('isdisplay');
+                    }
+
                 }
             })
         } else {
@@ -80,14 +92,50 @@ $(function () {
         }
         
     })
+    $('.regesiter_login p').on('click',function(){
+        $('.index_login').removeClass('isdisplay')
+        $('.index_regesiter').addClass('isdisplay')
+    })
+    // 发送验证码
+    function getValidCode(data){
+        $.ajax({
+            type:'POST',
+            url:GLOBAL.httpUrl+'auth/getValidCode',
+            dataType:'json',
+            headers:{"Content-Type":"application/json"},
+            // beforeSend: function(xhr) {
+            //     xhr.setRequestHeader("Content-Type", "application/json");
+            // },
+            data:data,
+            success: function(data){
+                // console.log(data);
+                console.log(data)
+            }
+        })
+    }
+    $('.fgtpwd .mes_code_btn').click(function(){
+        var data = JSON.stringify({phoneno:$('.fgtpwd .fgt_phone').val()})
+        console.log(data)
+        getValidCode(data)
+    })
+    $('.meslogin .mes_code_btn').click(function(){
+        var data = JSON.stringify({phoneno:$('.meslogin .mes_phone').val()})
+        console.log(data)
+        getValidCode(data)
+    })
+    $('.regesiter .res_code_btn').click(function(){
+        var data = JSON.stringify({phoneno:$('.regesiter .res_phone').val()})
+        console.log(data)
+        getValidCode(data)
+    })
     // 短信验证码登录
     $('.mes_btn').on('click',function(){
         
         if (GLOBAL.regPhone.test($('.mes_phone').val())){
-            var data = {
+            var data = JSON.stringify({
                 phoneno:$('.mes_phone').val(),
                 validcode:$('.mes_code').val()
-            }
+            })
             $.ajax({
                 type:'POST',
                 url:GLOBAL.httpUrl+'auth/loginByValidCode',
@@ -99,7 +147,7 @@ $(function () {
                 data:data,
                 success: function(data){
                     console.log(data);
-                    // $('.index_regesiter').addClass('isdisplay');
+                    $('.index_mes').addClass('isdisplay');
                     // $('.index_login').removeClass('isdisplay');
                 }
             })
@@ -110,13 +158,13 @@ $(function () {
     // 修改密码
     $('.fgtpwd .mes_btn').on('click',function(){
         if (GLOBAL.regPhone.test($('.fgt_phone').val())){
-            var data = {
+            var data = JSON.stringify({
                 phoneno:$('.fgt_code').val(),
                 validcode:$('.fgtpwd .mes_code').val()
-            }
+            })
             $.ajax({
                 type:'POST',
-                url:GLOBAL.httpUrl+'auth/loginByValidCode',
+                url:GLOBAL.httpUrl+'user/resetPassword',
                 dataType:'json',
                 headers:{"Content-Type":"application/json"},
                 // beforeSend: function(xhr) {

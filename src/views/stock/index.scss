@@ -1,0 +1,112 @@
+// 炒股选择场次
+.index_safe {
+
+    width: 1100px;
+    margin: 0 auto;
+    .index_apply {
+        border-bottom: 1px solid #d4d4d4;
+        padding: 30px 0 10px;
+        text-indent: 10px;
+        font-size: 18px;
+    }
+    .index_change {
+        p {
+            margin: 30px 0 20px;
+        }
+        .index_change_money {
+            height: 60px;
+            width: 360px;
+            padding-left: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #d4d4d4;
+        }
+        .index_change_btn {
+            input {
+                width: 100px;
+                height: 50px;
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #d4d4d4;
+                margin-right: 30px;
+            }
+            
+        }
+    }
+    .left_side,.right_side {
+        width: 50%;
+    }
+    .index_pz {
+        .index_pz_limit {
+            text-align: right;
+            color: #248ad2;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 30px 10px 10px 0;
+            border-bottom: 10px solid #d4d4d4;
+        }
+        ul {
+            border-bottom: 10px solid #d4d4d4;
+            li {
+                border-bottom: 1px solid #d4d4d4;
+                p {
+                    height: 60px;
+                    line-height: 60px;
+                    font-size: 16px;
+        
+                }
+                .right_side {
+                    width: 250px;
+                    text-align: right;
+                    color: #248ad2;
+                    padding-right: 10px;
+                }
+                .left_side {
+                    width: 250px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .index_enter {
+        display: table;
+        margin: 100px auto;
+        input {
+            width: 300px;
+            height: 50px;
+            color: #fff;
+            background: #248ad2;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+
+// 炒股主页
+
+.stock_mes {
+    width: 1100px;
+    margin: 0 auto;
+    ul {
+        background: #e7e9ed;
+        li {
+            float: left;
+            width: 12.5%;
+            h5 {
+                font-weight: 600;
+                height: 100px;
+                line-height: 100px;
+                text-indent: 10px;
+            }
+            input {
+                border: 1px solid #248ad2;
+                color: #248ad2;
+                border-radius: 5px;
+                background-color: #e7e9ed; 
+                height: 30px;
+                width: 80px;
+                margin-top: 36px;
+            }
+        }
+    }
+}
